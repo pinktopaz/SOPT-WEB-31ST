@@ -1,0 +1,106 @@
+body {
+  margin: 0px 0px 0px 0px;
+}
+
+hr {
+  background: #fff;
+  height: 2px;
+  border: none;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: blueviolet;
+  text-align: center;
+  line-height: 80px;
+  color: white;
+  padding: 5px 0 0px 0;
+  /* padding을 5 0 5 0 으로 주니까 가운데가 안맞춰져서 . . .  */
+  letter-spacing: 3px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto 0px auto;
+}
+
+div#leftbox {
+  width: 12%;
+}
+
+aside {
+  border-radius: 20px;
+}
+
+aside#brand {
+  width: 100%;
+  height: 130px;
+  background-color: rgba(221, 160, 221, 0.6);
+  margin-left: 10%;
+}
+
+aside#brand button {
+  border: none;
+  margin: 5px auto 5px 10px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+aside#brand #mcdonalds {
+  width: 80%;
+  height: 30%;
+  background-color: hotpink;
+  display: block;
+  margin-bottom: 10px;
+}
+
+aside#brand #burgerKing {
+  width: 80%;
+  height: 30%;
+  background-color: hotpink;
+  display: block;
+}
+
+article {
+  width: 69%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section {
+  width: 45%;
+  height: 200px;
+  line-height: 5px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+  /* padding: 3px 0px 3px 3px; */
+  margin: 20px 0px 20px 30px;
+  background-image: url("hamburger.png");
+  background-size: 30%;
+  background-position: 20% 60%;
+  background-repeat: no-repeat;
+}
+
+div#rightbox {
+  width: 21%;
+}
+
+aside#cart {
+  width: 100%;
+  height: 220px;
+  background-color: rgba(255, 192, 203, 0.7);
+  justify-content: flex-end;
+}
+
+aside#cart button {
+  border: none;
+  border-radius: 7px;
+  background-color: mediumpurple;
+  color: #fff;
+  font-weight: bold;
+}
