@@ -1,11 +1,11 @@
 body {
   margin: 0px 0px 0px 0px;
+  font-family: "Do Hyeon", sans-serif;
+  font-weight: 300px;
 }
 
-hr {
-  background: #fff;
-  height: 2px;
-  border: none;
+p {
+  margin: 0;
 }
 
 header {
@@ -25,12 +25,10 @@ header {
 main {
   display: flex;
   width: 100%;
-  height: 100%;
-  margin: 0px auto 0px auto;
 }
 
 div#leftbox {
-  width: 12%;
+  width: 10%;
 }
 
 aside {
@@ -41,33 +39,22 @@ aside#brand {
   width: 100%;
   height: 130px;
   background-color: rgba(221, 160, 221, 0.6);
-  margin-left: 10%;
+  margin-left: 15px;
 }
 
 aside#brand button {
+  width: 90%;
+  height: 18%;
   border: none;
-  margin: 5px auto 5px 10px;
   border-radius: 7px;
   font-weight: bold;
-}
-
-aside#brand #mcdonalds {
-  width: 80%;
-  height: 30%;
-  background-color: hotpink;
-  display: block;
   margin-bottom: 10px;
-}
-
-aside#brand #burgerKing {
-  width: 80%;
-  height: 30%;
-  background-color: hotpink;
+  background-color: rgba(186, 85, 211, 0.8);
   display: block;
 }
 
 article {
-  width: 69%;
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -75,32 +62,65 @@ article {
 section {
   width: 45%;
   height: 200px;
-  line-height: 5px;
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
-  /* padding: 3px 0px 3px 3px; */
-  margin: 20px 0px 20px 30px;
-  background-image: url("hamburger.png");
-  background-size: 30%;
-  background-position: 20% 60%;
-  background-repeat: no-repeat;
+  margin: 20px 0px 40px 35px;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  margin: 20px 10px 20px 70px;
+}
+
+div[class^="text_wrapper"] {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+strong.burger_name {
+  font-weight: 700;
+  font-size: 23px;
+}
+p.burger_price {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 17px;
 }
 
 div#rightbox {
-  width: 21%;
+  width: 20%;
+  margin-top: 17px;
+  margin-right: 5px;
 }
 
 aside#cart {
-  width: 100%;
+  width: 96%;
   height: 220px;
   background-color: rgba(255, 192, 203, 0.7);
-  justify-content: flex-end;
+
+  display: flex;
+  flex-direction: column;
+}
+
+aside#cart h2 {
+  margin: 10px auto auto 10px;
 }
 
 aside#cart button {
+  width: 30%;
+  height: 10%;
   border: none;
   border-radius: 7px;
   background-color: mediumpurple;
   color: #fff;
   font-weight: bold;
+}
+
+aside#cart hr {
+  background: black;
+  height: 7px;
+  border: none;
 }
