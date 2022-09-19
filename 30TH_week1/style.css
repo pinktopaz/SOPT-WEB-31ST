@@ -109,7 +109,7 @@ section.menu:hover {
   cursor: pointer;
 
   background-color: rgba(255, 255, 255, 0.5);
-  /* 왜 호버하면 뒤에 색깔이 안바뀔까! */
+  /* 왜 버튼은 호버하면 색이 변하는데 section은 적용이 안될까아아. . .(공부하는 중) */
 }
 
 img {
