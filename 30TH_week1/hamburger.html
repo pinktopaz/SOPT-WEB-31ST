@@ -26,7 +26,7 @@
         <aside id="brand">
           <strong>다른거 먹긔</strong>
           <button id="mcdonalds">맥도날드</button>
-          <button id="burgerKing">버거킹</button>
+          <button id="burgerKing">버거킝</button>
         </aside>
       </div>
 
@@ -104,18 +104,31 @@
 
       <div id="rightbox">
         <!-- 위와 같은 이유로, section 같은 태그도 괜찮아 보입니다 !! -->
-        <aside id="cart">
+        <aside class="cart">
           <strong>장바구늬</strong>
           <hr />
           <strong>누적금액</strong>
           <p>0원</p>
           <hr />
           <div class="cart_buttons">
-            <button>주문하긔</button>
+            <button class="order_btn">주문하긔</button>
             <button>취소하긔</button>
           </div>
         </aside>
+
+        <div class="order_modal_wrap">
+          <div class="order_modal_body">
+            <h1>정말 주문하시겠습니까?</h1>
+            <div class="order_modal_btn">
+              <button class="order_modal_yes">
+                <a href="complete.html" target="_blank">예</a>
+              </button>
+              <button class="order_modal_no">아니오</button>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
+    <script src="hamburger.js"></script>
   </body>
 </html>
