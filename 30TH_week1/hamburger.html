@@ -1,3 +1,6 @@
+<!-- html 코드를, 유효성 검사를 돌려보는 것도 좋을 것 같아! -->
+<!-- https://validator.w3.org/nu/ -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,24 +10,30 @@
 
     <title>햄식이를 도와주라주</title>
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
-    </style>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>🍔 햄식이를 도와주긔 🍔</header>
     <main>
+      <!-- id 값도 class 값보다 우선순위가 높고, 페이지에서 하나의 id밖에 선언하지 못해요 -->
+      <!-- 그래서 css 속성을 주기위함이라면, 보통 class 를 사용합니다! -->
       <div id="leftbox">
+        <!-- aside 태그는, 페이지 내용과 관련 없는 내용을 위한 시멘틱 태그입니다! (광고같은) -->
+        <!-- 맥도날드, 버거킹이라는 분류를 나눠주니 nav 태그가 적절해보입니다!! -->
         <aside id="brand">
           <strong>다른거 먹긔</strong>
           <button id="mcdonalds">맥도날드</button>
-          <button id="burgerKing">버거킹</button>
+          <button id="burgerKing">버거킝</button>
         </aside>
       </div>
 
+      <!-- article - section 순서는 아마 표준에 어긋나는 것으로 알고있어요! -->
+      <!-- article <-> section 으로 바꾸는 것이 어떨까 합니다 !!! -->
       <article>
         <section class="menu">
+          <!-- img 태그에는 alt 속성이 필수적이에요! -->
+          <!-- width, height 속성을 이렇게 Inline Style 로 나타내는 것은 우선순위가 가장 높아요! -->
+          <!-- 그래서 class 를 선언해주고, css 파일에서 width, height 값을 주는 것이 중복 코드도 줄일 수 있겠네요 !_!! -->
           <img width="150px" height="130px" src="hamburger.png" />
           <div class="text_wrapper">
             <strong class="burger_name">빅맥</strong>
@@ -91,18 +100,32 @@
       </article>
 
       <div id="rightbox">
-        <aside id="cart">
+        <!-- 위와 같은 이유로, section 같은 태그도 괜찮아 보입니다 !! -->
+        <aside class="cart">
           <strong>장바구늬</strong>
           <hr />
           <strong>누적금액</strong>
           <p>0원</p>
           <hr />
           <div class="cart_buttons">
-            <button>주문하긔</button>
+            <button class="order_btn">주문하긔</button>
             <button>취소하긔</button>
           </div>
         </aside>
+
+        <div class="order_modal_wrap">
+          <div class="order_modal_body">
+            <h1>정말 주문하시겠습니까?</h1>
+            <div class="order_modal_btn">
+              <button class="order_modal_yes">
+                <a href="complete.html" target="_blank">예</a>
+              </button>
+              <button class="order_modal_no">아니오</button>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
+    <script src="hamburger.js"></script>
   </body>
 </html>

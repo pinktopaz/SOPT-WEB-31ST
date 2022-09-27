@@ -1,3 +1,8 @@
+/* CSS 검사를 돌려보는 것도 좋을 것 같아! */
+/* https://jigsaw.w3.org/css-validator/ */
+
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+
 body {
   margin: 0;
   padding: 0;
@@ -10,7 +15,10 @@ p {
   margin: 0;
 }
 
+/* 이렇게 태그를 css 선택자로 두면, 서비스가 커질 수록 에러가 날 가능성이 높아져! */
+/* 그래서 css를 적용할 태그들에 모두 class name 을 선언하고, class 선택자로 css 를 적용하면 좋아 */
 header {
+  /* width 100% 는 block 태그의 기본 속성으로, 지워도 좋을 것 같아! */
   width: 100%;
   height: 80px;
 
@@ -109,7 +117,6 @@ section.menu:hover {
   cursor: pointer;
 
   background-color: rgba(255, 255, 255, 0.5);
-  /* 왜 버튼은 호버하면 색이 변하는데 section은 적용이 안될까아아. . .(공부하는 중) */
 }
 
 img {
@@ -139,7 +146,7 @@ div#rightbox {
   width: 20%;
 }
 
-aside#cart {
+.cart {
   width: 100%;
   height: 250px;
 
@@ -155,7 +162,7 @@ aside#cart {
   top: 15px;
 }
 
-aside#cart strong {
+.cart strong {
   font-size: 25px;
 
   padding-left: 20px;
@@ -163,13 +170,13 @@ aside#cart strong {
   margin-bottom: 30px;
 }
 
-aside#cart p {
+.cart p {
   padding-left: 20px;
 
   margin-top: 3px;
 }
 
-aside#cart .cart_buttons {
+.cart .cart_buttons {
   margin-top: 10px;
 
   width: 100%;
@@ -178,7 +185,7 @@ aside#cart .cart_buttons {
   justify-content: center;
 }
 
-aside#cart button {
+.cart button {
   width: 30%;
 
   margin: 0 5px 0 3px;
@@ -192,16 +199,78 @@ aside#cart button {
   font-weight: bold;
 }
 
-aside#cart button:hover {
+.cart button:hover {
   cursor: pointer;
 
   background-color: #fff;
   color: black;
 }
 
-aside#cart hr {
+.cart hr {
   background: #fff;
   height: 2px;
   border: none;
   width: 90%;
+}
+
+.order_modal_wrap {
+  width: 400px;
+  height: 200px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  visibility: hidden;
+}
+
+.order_modal_body {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 30px 30px 30px 30px;
+
+  background-color: rgb(252, 149, 139);
+
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.order_modal_btn {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order_modal_yes,
+.order_modal_no {
+  width: 45%;
+
+  border: none;
+  border-radius: 7px;
+
+  background-color: rgba(213, 100, 141, 0.5);
+  color: black;
+
+  font-weight: bold;
+}
+
+.order_modal_yes a {
+  text-decoration: none;
+  color: black;
+}
+
+.order_modal_yes a:hover {
+  color: black;
+}
+
+.order_modal_yes:hover,
+.order_modal_no:hover {
+  cursor: pointer;
+  background-color: #fff;
 }
