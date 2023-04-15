@@ -7,104 +7,105 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>햄식이를 도와주라주</title>
-    <!-- head 태그 내의 style 태그는 css 파일에 작성하는 것보다 우선순위가 높아서, 잘 사용하지 않아요! (에러 위험) -->
-    <!-- style.css 에 @import 문 넣는 게 어떨까 해요 -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
-    </style>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>🍔 햄식이를 도와주긔 🍔</header>
+    <header class="header">🍔 햄식이를 도와주긔 🍔</header>
     <main>
       <!-- id 값도 class 값보다 우선순위가 높고, 페이지에서 하나의 id밖에 선언하지 못해요 -->
       <!-- 그래서 css 속성을 주기위함이라면, 보통 class 를 사용합니다! -->
-      <div id="leftbox">
+      <div class="leftbox">
         <!-- aside 태그는, 페이지 내용과 관련 없는 내용을 위한 시멘틱 태그입니다! (광고같은) -->
         <!-- 맥도날드, 버거킹이라는 분류를 나눠주니 nav 태그가 적절해보입니다!! -->
-        <aside id="brand">
+        <nav class="brand">
           <strong>다른거 먹긔</strong>
-          <button id="mcdonalds">맥도날드</button>
-          <button id="burgerKing">버거킝</button>
-        </aside>
+          <button class="mcdonalds">맥도날드</button>
+          <button class="burgerKing">버거킝</button>
+        </nav>
       </div>
 
       <!-- article - section 순서는 아마 표준에 어긋나는 것으로 알고있어요! -->
       <!-- article <-> section 으로 바꾸는 것이 어떨까 합니다 !!! -->
-      <article>
-        <section class="menu">
+      <section>
+        <article class="menu">
           <!-- img 태그에는 alt 속성이 필수적이에요! -->
           <!-- width, height 속성을 이렇게 Inline Style 로 나타내는 것은 우선순위가 가장 높아요! -->
           <!-- 그래서 class 를 선언해주고, css 파일에서 width, height 값을 주는 것이 중복 코드도 줄일 수 있겠네요 !_!! -->
-          <img width="150px" height="130px" src="hamburger.png" />
+          <img
+            class="hamburger_img"
+            alt="hamburger image"
+            src="hamburger.png"
+          />
           <div class="text_wrapper">
             <strong class="burger_name">빅맥</strong>
             <p class="burger_price">5,500원</p>
             <p>얼마나 맛있긔?</p>
           </div>
-        </section>
-        <section class="menu">
+        </article>
+        <article class="menu">
           <img width="150px" height="130px" src="hamburger.png" />
           <div class="text_wrapper">
             <strong class="burger_name">슈슈버거</strong>
             <p class="burger_price">5,500원</p>
             <p>얼마나 맛있긔?</p>
           </div>
-        </section>
-        <section class="menu">
+        </article>
+        <article class="menu">
           <img width="150px" height="130px" src="hamburger.png" />
           <div class="text_wrapper">
             <strong class="burger_name">베토디</strong>
             <p class="burger_price">5,500원</p>
             <p>얼마나 맛있긔?</p>
           </div>
-        </section>
-        <section class="menu">
+        </article>
+        <article class="menu">
           <img width="150px" height="130px" src="hamburger.png" />
           <div class="text_wrapper">
             <strong class="burger_name">상하이</strong>
             <p class="burger_price">5,500원</p>
             <p>얼마나 맛있긔?</p>
           </div>
-        </section>
-        <section class="menu">
+        </article>
+        <article class="menu">
           <img width="150px" height="130px" src="hamburger.png" />
           <div class="text_wrapper">
             <strong class="burger_name">1955</strong>
             <p>5,500원</p>
             <p>얼마나 맛있긔?</p>
           </div>
-        </section>
-        <section class="menu">
+        </article>
+        <article class="menu">
           <img width="150px" height="130px" src="hamburger.png" />
           <div class="text_wrapper">
             <strong class="burger_name">불고기</strong>
             <p class="burger_price">5,500원</p>
             <p>얼마나 맛있긔?</p>
           </div>
-        </section>
-        <section class="menu">
+        </article>
+        <article class="menu">
           <img width="150px" height="130px" src="hamburger.png" />
           <div class="text_wrapper">
             <strong class="burger_name">새우</strong>
             <p class="burger_price">5,500원</p>
             <p>얼마나 맛있긔?</p>
           </div>
-        </section>
-        <section class="menu">
+        </article>
+        <article class="menu">
           <img width="150px" height="130px" src="hamburger.png" />
           <div class="text_wrapper">
             <strong class="burger_name">상하이 스파이시</strong>
             <p class="burger_price">5,500원</p>
             <p>얼마나 맛있긔?</p>
           </div>
-        </section>
-      </article>
+        </article>
+      </section>
 
-      <div id="rightbox">
+      <div class="rightbox">
         <!-- 위와 같은 이유로, section 같은 태그도 괜찮아 보입니다 !! -->
-        <aside class="cart">
+        <section class="cart">
           <strong>장바구늬</strong>
           <hr />
           <strong>누적금액</strong>
@@ -114,7 +115,7 @@
             <button class="order_btn">주문하긔</button>
             <button>취소하긔</button>
           </div>
-        </aside>
+        </section>
 
         <div class="order_modal_wrap">
           <div class="order_modal_body">

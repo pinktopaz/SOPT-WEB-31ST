@@ -1,6 +1,8 @@
 /* CSS 검사를 돌려보는 것도 좋을 것 같아! */
 /* https://jigsaw.w3.org/css-validator/ */
 
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+
 body {
   margin: 0;
   padding: 0;
@@ -15,9 +17,8 @@ p {
 
 /* 이렇게 태그를 css 선택자로 두면, 서비스가 커질 수록 에러가 날 가능성이 높아져! */
 /* 그래서 css를 적용할 태그들에 모두 class name 을 선언하고, class 선택자로 css 를 적용하면 좋아 */
-header {
+.header {
   /* width 100% 는 block 태그의 기본 속성으로, 지워도 좋을 것 같아! */
-  width: 100%;
   height: 80px;
 
   padding: 5px 0 0 0;
@@ -39,15 +40,16 @@ main {
   justify-content: space-around;
 }
 
-aside {
+nav,
+.cart {
   border-radius: 20px;
 }
 
-div#leftbox {
+.leftbox {
   width: 10%;
 }
 
-aside#brand {
+.brand {
   width: 100%;
   height: 130px;
 
@@ -61,14 +63,14 @@ aside#brand {
   justify-content: center;
 }
 
-aside#brand strong {
+.brand strong {
   font-size: 20px;
 
   margin-top: 10px;
   margin-bottom: 15px;
 }
 
-aside#brand button {
+.brand button {
   width: 80%;
   height: 18%;
   margin-bottom: 10px;
@@ -81,13 +83,13 @@ aside#brand button {
   text-align: center;
 }
 
-aside#brand button:hover {
+.brand button:hover {
   cursor: pointer;
 
   background-color: #fff;
 }
 
-article {
+section {
   width: 65%;
 
   display: flex;
@@ -95,7 +97,7 @@ article {
   justify-content: space-between;
 }
 
-section.menu {
+.menu {
   width: 49%;
   height: 200px;
 
@@ -111,16 +113,17 @@ section.menu {
   align-items: center;
 }
 
-section.menu:hover {
+.menu:hover {
   cursor: pointer;
 
   background-color: rgba(255, 255, 255, 0.5);
-  /* 왜 호버하면 뒤에 색깔이 안바뀔까! */
-  /* --> 바뀌는데,,!? 색깔이 흰색이에요 */
 }
 
-img {
+.hamburger_img {
   margin: 20px 10px 20px 70px;
+
+  width: 150px;
+  height: 130px;
 }
 
 div.text_wrapper {
@@ -142,7 +145,7 @@ p.burger_price {
   font-size: 17px;
 }
 
-div#rightbox {
+.rightbox {
   width: 20%;
 }
 
